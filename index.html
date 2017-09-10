@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+    <html>
+        <head>
+                <title>Easy EMDR</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <link rel = "stylesheet" hef = "style/normalize.css" />
+                <link rel = "stylesheet" href = "style/style.css" />
+                <link rel = "stylesheet" href = "style/animate.css" />
+                <link rel = "stylesheet" href = "style/bootstrap.min.css" />
+                <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+                <link rel='shortcut icon' href='images/flateye.ico' type='image/x-icon'/ >
+                <link rel = "stylesheet" href = "style/sweetalert.css" />
+                <script src = "scripts/script.js"></script>
+                <script src = "scripts/sweetalert.min.js"></script>
+                <meta name="description" content="The easiest solution for EMDR services on the internet. Learn, explore, and relax.">
+        </head>
+        <body id = "bodyTag" onload="sunOrMoonIndex2()">
+            <div id = "site-wrapper" class = "animated fadeIn">
+                <div class = "header-container">
+                    <div class = "col-xs-12">
+                        <img src = "images/info.png" class = "pull-right info-icon" id = "info" onClick = "loadAbout()" />
+                    </div>
+                    <img src = "images/sunset.png" class = "night-mode" id = "darkMode" onClick = "sunOrMoonIndex()" />
+
+                    <div class = "header" id = 'test'>Easy EMDR</div>
+                    
+                </div>
+            <div class = "body-container">
+                
+                <div class = "hidden-xs hidden-sm color-selection tag">Color of Square</div>
+                <div class = "visible-xs visible-sm color-selection tag-no-underline col-xs-6 col-xs-offset-3 bottom-pad">Color of Square</div>
+
+                <div class = "selection-container">
+                    
+                  <div class = "hidden-xs hidden-sm">
+                      
+                        <div id = "red" class = "flex-element color red" onClick = "colorSelect('red')"></div>
+                        <div id = "purple" class = "flex-element color purple" onClick = "colorSelect('purple')"></div>
+                        <div id = "blue" class = "flex-element color blue" onClick = "colorSelect('blue')"></div>
+                        <div id = "green" class = "flex-element color green" onClick = "colorSelect('green')"></div>
+                        <div id = "orange" class = "flex-element color orange" onClick = "colorSelect('orange')"></div>
+                        <span class="stretch"></span>
+                   </div>
+                   <div class = "visible-xs visible-sm">
+                        <div id = "redx" class = "col-xs-6 col-xs-offset-3 bottom-pad flex-element color red" onClick = "colorSelect('red')"></div>
+                        <div id = "purplex" class = "col-xs-6 col-xs-offset-3 bottom-pad flex-element color purple" onClick = "colorSelect('purple')"></div>
+                        <div id = "bluex" class = "col-xs-6 col-xs-offset-3 bottom-pad flex-element color blue" onClick = "colorSelect('blue')"></div>
+                        <div id = "greenx" class = "col-xs-6 col-xs-offset-3 bottom-pad flex-element color green" onClick = "colorSelect('green')"></div>
+                        <div id = "orangex" class = "col-xs-6 col-xs-offset-3 bottom-pad flex-element color orange" onClick = "colorSelect('orange')"></div>
+                   </div>
+                </div>
+                
+                <div class = "hidden-xs hidden-sm color-selection tag">Speed of Square</div>
+                <div class = "visible-xs visible-sm color-selection tag-no-underline col-xs-6 col-xs-offset-3 bottom-pad">Speed of Square</div>
+                <div class = "selection-container">
+
+                    <div class = "hidden-xs hidden-sm">
+                        <div id = "very-slow" class = "flex-element selection-option" onClick = "speedSelect('very-slow')">VERY SLOW</div>
+                        <div id = "slow" class = "flex-element selection-option" onClick = "speedSelect('slow')">SLOW</div>
+                        <div id = "medium" class = "flex-element selection-option" onClick = "speedSelect('medium')">MEDIUM</div>
+                        <div id = "fast" class = "flex-element selection-option" onClick = "speedSelect('fast')">FAST</div>
+                        <div id = "very-fast" class = "flex-element selection-option" onClick = "speedSelect('very-fast')">VERY FAST</div>
+                        <span class="stretch"></span>
+                    </div>
+                    <div class = "visible-xs visible-sm">
+                        <div id = "very-slowx" class = "col-xs-6 col-xs-offset-3 bottom-pad flex-element selection-option" onClick = "speedSelect('very-slow')">VERY SLOW</div>
+                        <div id = "slowx" class = "col-xs-6 col-xs-offset-3 bottom-pad flex-element selection-option" onClick = "speedSelect('slow')">SLOW</div>
+                        <div id = "mediumx" class = "col-xs-6 col-xs-offset-3 bottom-pad flex-element selection-option" onClick = "speedSelect('medium')">MEDIUM</div>
+                        <div id = "fastx" class = "col-xs-6 col-xs-offset-3 bottom-pad flex-element selection-option" onClick = "speedSelect('fast')">FAST</div>
+                        <div id = "very-fastx" class = "col-xs-6 col-xs-offset-3 bottom-pad flex-element selection-option" onClick = "speedSelect('very-fast')">VERY FAST</div>
+                    </div>
+
+                </div>
+            <div class = "hidden-xs hidden-sm color-selection tag">Duration of Session</div>
+            <div class = "visible-xs visible-sm color-selection tag-no-underline col-xs-6 col-xs-offset-3 bottom-pad">Duration of Session</div>
+                
+                <div class = "selection-container">
+
+                    <div class = "hidden-xs hidden-sm">
+                        <div id = "num15" class = "flex-element selection-option" onClick = "timeSelect('num15')">15 SECONDS</div>
+                        <div id = "num20" class = "flex-element selection-option" onClick = "timeSelect('num20')">20 SECONDS</div>
+                        <div id = "num25" class = "flex-element selection-option" onClick = "timeSelect('num25')">25 SECONDS</div>
+                        <div id = "num30" class = "flex-element selection-option" onClick = "timeSelect('num30')">30 SECONDS</div>
+                        <div id = "num60" class = "flex-element selection-option" onClick = "timeSelect('num60')">60 SECONDS</div>
+                        <span class="stretch"></span>
+                    </div>
+                    <div class = "visible-xs visible-sm">
+                        <div id = "num15x" class = "col-xs-6 col-xs-offset-3 bottom-pad flex-element selection-option" onClick = "timeSelect('num15')">15 SECONDS</div>
+                        <div id = "num20x" class = "col-xs-6 col-xs-offset-3 bottom-pad flex-element selection-option" onClick = "timeSelect('num20')">20 SECONDS</div>
+                        <div id = "num25x" class = "col-xs-6 col-xs-offset-3 bottom-pad flex-element selection-option" onClick = "timeSelect('num25')">25 SECONDS</div>
+                        <div id = "num30x" class = "col-xs-6 col-xs-offset-3 bottom-pad flex-element selection-option" onClick = "timeSelect('num30')">30 SECONDS</div>
+                        <div id = "num60x" class = "col-xs-6 col-xs-offset-3 bottom-pad flex-element selection-option" onClick = "timeSelect('num60')">60 SECONDS</div>
+                    </div>
+                </div>
+        
+                <div class = "row flip-option">
+                    <div class = "col-xs-6 col-xs-offset-3">
+
+                        Enable Easing
+                        
+                        <section title=".slider" class = "flip-unit" onClick = "moveSlider(event)">
+                            <div class="slider">  
+                            <input type="checkbox" value="None" id="slider" name="check" checked />
+                            <label id = "checkboxSlider" for="slider"></label>
+                            </div> 
+                        </section>
+                    </div>
+                </div>
+
+                
+                
+                <div class = "button-container">
+                    <div id = 'test2' class = "start-session" onClick = "startSession()">START SESSION</div>
+                </div>
+                
+                <div id = "alert" class = "alert-container">Please make a selection for each field!</div>
+            </div>
+            
+                <div class = "footer"><span id = 'test3'>Designed by</span> <a class = "link" href = "http://zacharyjordan.github.io" target = "_blank">Topbox Software</a></div>
+            </div>
+        </body>
+    </html>
